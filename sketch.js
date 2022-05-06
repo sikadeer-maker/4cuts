@@ -114,9 +114,6 @@ function touchEnded() {
             // 안드로이드 : 자동 저장
             let description = "아래 현상된 이미지를 자동으로 저장합니다.";
             drawPhotoInHtml(description, today);
-            setTimeout(() => {
-              saveCanvas(photo, "sikadeer-" + today, "png");
-            }, 100);
           } else if (device_name === "ios") {
             // 아이폰 : 꾹 눌러서 저장
             let description = "아래 현상된 이미지를 꾹 눌러서 저장할 수 있어요";
