@@ -47,7 +47,7 @@ function setup() {
     alert(
       "현재 디바이스에서는 환경모드 실행이 어렵습니다. 셀카모드로 이동합니다."
     );
-    document.location.href = "/self4cut.html";
+    document.location.href = "./self4cut.html";
     noLoop();
   }
   BG_COLOR = color(200);
