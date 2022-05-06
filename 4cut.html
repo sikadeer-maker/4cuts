@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>🦌아현생일네컷📷</title>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b0708122f6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+    <meta property="og:url" content="https://sikadeer-maker.github.io/4cuts/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="아현 생일 네컷" />
+    <meta
+      property="og:description"
+      content="네컷에 담긴 아현이와 특별한 하루"
+    />
+    <meta
+      property="og:image"
+      content="https://sikadeer-maker.github.io/childrens-day/assets/bambi-og.png"
+    />
+  </head>
+  <body>
+    <main id="main"></main>
+    <script src="sketch.js"></script>
+    <script>
+      const agent = navigator.userAgent.toLowerCase();
+
+      const checkDevice = () => {
+        if (agent.indexOf("android") > -1) {
+          //안드로이드
+          return "android";
+        } else if (
+          agent.indexOf("iphone") > -1 ||
+          agent.indexOf("ipad") > -1 ||
+          agent.indexOf("ipod") > -1
+        ) {
+          //IOS
+          return "ios";
+        } else {
+          //아이폰, 안드로이드 외
+          return "other";
+        }
+      };
+
+      if (checkDevice() === "ios") {
+        alert(
+          "Android 기준으로 개발되어, iOS 환경에서는 제대로 동작하지 않을 수 있습니다."
+        );
+      } else {
+        if (agent.indexOf("chrome") > -1) {
+        } else {
+          alert("Chrome이 아닌 환경에서는 제대로 동작하지 않을 수 있습니다.");
+        }
+      }
+    </script>
+  </body>
+  <footer class="credit">
+    <a href="https://twitter.com/SikadeerMaker">
+      <i class="fa-brands fa-twitter-square"></i> 아육시 (@SikadeerMaker)
+    </a>
+  </footer>
+</html>

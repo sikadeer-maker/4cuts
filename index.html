@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🦌아현생일네컷📷</title>
+    <script>
+      function detectWebcam() {
+        let md = navigator.mediaDevices;
+        if (!md || !md.enumerateDevices) return callback(false);
+        md.enumerateDevices().then((devices) => {
+          devices.some((device) => "videoinput" === device.kind);
+        });
+      }
+
+      const isMobile = () => {
+        const pcDevice = "win16|wind32|win64|mac|macintel";
+        if (navigator.platform) {
+          if (pcDevice.indexOf(navigator.platform.toLowerCase()) < 0) {
+            return true; // mobile
+          }
+        }
+        return false; //desktop
+      };
+    </script>
+    <style>
+      /* From uiverse.io */
+      /* https://uiverse.io/detail/cssbuttons-io/evil-monkey-41 */
+      button {
+        position: relative;
+        border: none;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        outline-offset: 4px;
+        transition: filter 250ms;
+        user-select: none;
+        touch-action: manipulation;
+      }
+
+      .shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        background: hsl(0deg 0% 0% / 0.25);
+        will-change: transform;
+        transform: translateY(2px);
+        transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+      }
+
+      .edge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        background: linear-gradient(
+          to left,
+          hsl(340deg 100% 16%) 0%,
+          hsl(340deg 100% 32%) 8%,
+          hsl(340deg 100% 32%) 92%,
+          hsl(340deg 100% 16%) 100%
+        );
+      }
+
+      .front {
+        display: block;
+        position: relative;
+        padding: 12px 27px;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        color: white;
+        background: hsl(345deg 100% 47%);
+        will-change: transform;
+        transform: translateY(-4px);
+        transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+      }
+
+      .edge-blue {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        background: linear-gradient(
+          to left,
+          hsl(200deg 100% 16%) 0%,
+          hsl(200deg 100% 32%) 8%,
+          hsl(200deg 100% 32%) 92%,
+          hsl(200deg 100% 16%) 100%
+        );
+      }
+
+      .front-blue {
+        display: block;
+        position: relative;
+        padding: 12px 27px;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        color: white;
+        background: hsl(200deg 100% 47%);
+        will-change: transform;
+        transform: translateY(-4px);
+        transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+      }
+
+      button:hover {
+        filter: brightness(110%);
+      }
+
+      button:hover .front {
+        transform: translateY(-6px);
+        transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+      }
+
+      button:active .front {
+        transform: translateY(-2px);
+        transition: transform 34ms;
+      }
+
+      button:hover .shadow {
+        transform: translateY(4px);
+        transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+      }
+
+      button:active .shadow {
+        transform: translateY(1px);
+        transition: transform 34ms;
+      }
+
+      button:focus:not(:focus-visible) {
+        outline: none;
+      }
+
+      .flex-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .margin-top-1rem {
+        margin-top: 1rem;
+      }
+
+      @font-face {
+        font-family: "TTCrownMychewR";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/TTCrownMychewR.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      * {
+        font-family: "TTCrownMychewR";
+      }
+
+      html {
+        background-color: #feeeed;
+      }
+
+      #credit > a,
+      #credit > a:visited {
+        font-family: "ACCchildrenheartOTF-Regular";
+        text-decoration: none;
+        color: #1da1f2;
+      }
+
+      @media only screen and (min-width: 960px) {
+        .hide-desktop {
+          display: none;
+        }
+      }
+
+      @font-face {
+        font-family: "ACCchildrenheartOTF-Regular";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112-2@1.0/ACCchildrenheartOTF-Regular.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <button class="margin-top-1rem" onclick="location.href='/self4cut.html' ">
+        <span class="shadow"></span>
+        <span class="edge"></span>
+        <span class="front text"> 셀카모드 </span>
+      </button>
+      <button
+        class="margin-top-1rem hide-desktop"
+        onclick="location.href='/4cut.html' "
+      >
+        <span class="shadow"></span>
+        <span class="edge-blue"></span>
+        <span class="front-blue text"> 환경모드 </span>
+      </button>
+
+      <footer class="margin-top-1rem hide-desktop" id="credit">
+        <a href="https://twitter.com/SikadeerMaker">
+          <i class="fa-brands fa-twitter-square"></i> 아육시 (@SikadeerMaker)
+        </a>
+      </footer>
+    </div>
+  </body>
+</html>

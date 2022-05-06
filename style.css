@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "ACCchildrenheartOTF-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112-2@1.0/ACCchildrenheartOTF-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #feeeed;
+  height: 100%;
+  font-family: "ACCchildrenheartOTF-Regular";
+}
+
+#main > p {
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "ACCchildrenheartOTF-Regular";
+}
+
+@media (orientation: portrait) {
+  /* Portrait 모드일 때 적용할 CSS */
+  img {
+    width: 100%;
+    height: auto;
+  }
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (orientation: landscape) {
+  /* Landscape 모드일 때 적용할 CSS */
+  img {
+    width: auto;
+    height: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  canvas {
+    width: auto !important;
+    height: 80% !important;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+img {
+  box-shadow: 2px 2px 2px #999;
+}
+
+.credit {
+  text-align: center;
+  margin-top: 1em;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #1da1f2;
+  font-family: "ACCchildrenheartOTF-Regular";
+}
