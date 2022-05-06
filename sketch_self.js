@@ -79,7 +79,7 @@ function draw() {
     fill(255);
     textAlign(CENTER, CENTER);
     text(
-      isMobile() ? "터치" : "클릭" + "할 때마다 한 칸씩 사진이 촬영됩니다.",
+      (isMobile() ? "터치" : "클릭") + "할 때마다 한 칸씩 사진이 촬영됩니다.",
       cx,
       FRAME_Y_POSITION[0] + FRAME_Y_POSITION[1] * 0.5
     );
